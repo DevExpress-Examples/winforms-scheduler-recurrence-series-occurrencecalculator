@@ -1,16 +1,12 @@
-﻿Imports System
-Imports System.Collections.Generic
 Imports System.ComponentModel
-Imports System.Data
 Imports System.Drawing
 Imports System.Linq
-Imports System.Text
-Imports System.Threading.Tasks
 Imports System.Windows.Forms
 Imports DevExpress.XtraScheduler
 
 Namespace OccurrenceCalculatorSample
-    Partial Public Class Form1
+
+    Public Partial Class Form1
         Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
         Public Sub New()
@@ -37,17 +33,14 @@ Namespace OccurrenceCalculatorSample
             schedulerStorage1.Appointments.Add(apt)
         End Sub
 
-        Private Sub btnTest_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRecurrenceToNormal.ItemClick
-'            #Region "#OccurrenceCalculator"
+        Private Sub btnTest_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs)
+#Region "#OccurrenceCalculator"
             ' Calculate occurrences for the first recurrent series.
             Dim pattern As Appointment = schedulerStorage1.Appointments.Items.FirstOrDefault(Function(item) item.Type = AppointmentType.Pattern)
-            If pattern Is Nothing Then
-                Return
-            End If
+            If pattern Is Nothing Then Return
             Dim calc As OccurrenceCalculator = OccurrenceCalculator.CreateInstance(pattern.RecurrenceInfo)
-            Dim processedInterval As New TimeInterval(Date.Today, Date.Today.AddDays(7))
+            Dim processedInterval As TimeInterval = New TimeInterval(Date.Today, Date.Today.AddDays(7))
             Dim calculatedOccurrences As AppointmentBaseCollection = calc.CalcOccurrences(processedInterval, pattern)
-
             ' Create normal appointments in place of occurrences.
             schedulerStorage1.BeginUpdate()
             For i As Integer = 0 To calculatedOccurrences.Count - 1
@@ -57,25 +50,23 @@ Namespace OccurrenceCalculatorSample
                 resultAppointment.Start = calculatedOccurrences(i).Start
                 resultAppointment.End = calculatedOccurrences(i).End
                 schedulerStorage1.Appointments.Add(resultAppointment)
-            Next i
-            schedulerStorage1.EndUpdate()
+            Next
 
+            schedulerStorage1.EndUpdate()
             ' Remove the pattern and occurrences.
             schedulerStorage1.Appointments.Remove(pattern)
-'            #End Region ' #OccurrenceCalculator
+#End Region  ' #OccurrenceCalculator
         End Sub
 
-        Private Sub btnCalculateSeriesInterval_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnCalculateSeriesInterval.ItemClick
-'            #Region "#OccurrenceCalculatorCalcSequenceInterval"
+        Private Sub btnCalculateSeriesInterval_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs)
+#Region "#OccurrenceCalculatorCalcSequenceInterval"
             ' Calculate a time interval occupied by the first recurrent series.
             Dim pattern As Appointment = schedulerStorage1.Appointments.Items.FirstOrDefault(Function(item) item.Type = AppointmentType.Pattern)
-            If pattern Is Nothing Then
-                Return
-            End If
+            If pattern Is Nothing Then Return
             Dim calc As OccurrenceCalculator = OccurrenceCalculator.CreateInstance(pattern.RecurrenceInfo)
             Dim ti As TimeInterval = calc.CalcSequenceInterval(pattern)
-            MessageBox.Show(ti.ToString(), "Time Interval of the First Recurrent Series")
-'            #End Region ' #OccurrenceCalculatorCalcSequenceInterval
+            Call MessageBox.Show(ti.ToString(), "Time Interval of the First Recurrent Series")
+#End Region  ' #OccurrenceCalculatorCalcSequenceInterval
         End Sub
     End Class
 End Namespace

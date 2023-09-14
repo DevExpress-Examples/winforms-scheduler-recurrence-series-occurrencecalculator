@@ -1,5 +1,7 @@
-﻿Namespace OccurrenceCalculatorSample
-    Partial Public Class Form1
+Namespace OccurrenceCalculatorSample
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,23 +12,23 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim timeRuler1 As New DevExpress.XtraScheduler.TimeRuler()
-            Dim timeRuler2 As New DevExpress.XtraScheduler.TimeRuler()
-            Dim timeRuler3 As New DevExpress.XtraScheduler.TimeRuler()
+            Dim timeRuler1 As DevExpress.XtraScheduler.TimeRuler = New DevExpress.XtraScheduler.TimeRuler()
+            Dim timeRuler2 As DevExpress.XtraScheduler.TimeRuler = New DevExpress.XtraScheduler.TimeRuler()
+            Dim timeRuler3 As DevExpress.XtraScheduler.TimeRuler = New DevExpress.XtraScheduler.TimeRuler()
             Me.schedulerControl1 = New DevExpress.XtraScheduler.SchedulerControl()
             Me.schedulerStorage1 = New DevExpress.XtraScheduler.SchedulerStorage(Me.components)
             Me.ribbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
@@ -94,12 +96,12 @@
             Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
             Me.schedulerBarController1 = New DevExpress.XtraScheduler.UI.SchedulerBarController()
             Me.defaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-            CType(Me.schedulerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.schedulerStorage1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.repositoryItemSpinEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.repositoryItemDuration1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.schedulerBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.schedulerControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.schedulerStorage1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemSpinEdit1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemDuration1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.schedulerBarController1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' schedulerControl1
@@ -110,7 +112,7 @@
             Me.schedulerControl1.MenuManager = Me.ribbonControl1
             Me.schedulerControl1.Name = "schedulerControl1"
             Me.schedulerControl1.Size = New System.Drawing.Size(784, 422)
-            Me.schedulerControl1.Start = New Date(2017, 06, 20, 0, 0, 0, 0)
+            Me.schedulerControl1.Start = New System.DateTime(2017, 06, 20, 0, 0, 0, 0)
             Me.schedulerControl1.TabIndex = 0
             Me.schedulerControl1.Text = "t"
             Me.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1)
@@ -122,13 +124,13 @@
             ' ribbonControl1
             ' 
             Me.ribbonControl1.ExpandCollapseItem.Id = 0
-            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() { Me.ribbonControl1.ExpandCollapseItem, Me.openScheduleItem1, Me.saveScheduleItem1, Me.printPreviewItem1, Me.printItem1, Me.printPageSetupItem1, Me.newAppointmentItem1, Me.newRecurringAppointmentItem1, Me.navigateViewBackwardItem1, Me.navigateViewForwardItem1, Me.gotoTodayItem1, Me.viewZoomInItem1, Me.viewZoomOutItem1, Me.switchToDayViewItem1, Me.switchToWorkWeekViewItem1, Me.switchToWeekViewItem1, Me.switchToFullWeekViewItem1, Me.switchToMonthViewItem1, Me.switchToTimelineViewItem1, Me.switchToGanttViewItem1, Me.groupByNoneItem1, Me.groupByDateItem1, Me.groupByResourceItem1, Me.switchTimeScalesItem1, Me.changeScaleWidthItem1, Me.switchTimeScalesCaptionItem1, Me.switchCompressWeekendItem1, Me.switchShowWorkTimeOnlyItem1, Me.switchCellsAutoHeightItem1, Me.changeSnapToCellsUIItem1, Me.editAppointmentQueryItem1, Me.editOccurrenceUICommandItem1, Me.editSeriesUICommandItem1, Me.deleteAppointmentsItem1, Me.deleteOccurrenceItem1, Me.deleteSeriesItem1, Me.splitAppointmentItem1, Me.changeAppointmentStatusItem1, Me.changeAppointmentLabelItem1, Me.toggleRecurrenceItem1, Me.changeAppointmentReminderItem1, Me.btnRecurrenceToNormal, Me.btnCalculateSeriesInterval})
+            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.openScheduleItem1, Me.saveScheduleItem1, Me.printPreviewItem1, Me.printItem1, Me.printPageSetupItem1, Me.newAppointmentItem1, Me.newRecurringAppointmentItem1, Me.navigateViewBackwardItem1, Me.navigateViewForwardItem1, Me.gotoTodayItem1, Me.viewZoomInItem1, Me.viewZoomOutItem1, Me.switchToDayViewItem1, Me.switchToWorkWeekViewItem1, Me.switchToWeekViewItem1, Me.switchToFullWeekViewItem1, Me.switchToMonthViewItem1, Me.switchToTimelineViewItem1, Me.switchToGanttViewItem1, Me.groupByNoneItem1, Me.groupByDateItem1, Me.groupByResourceItem1, Me.switchTimeScalesItem1, Me.changeScaleWidthItem1, Me.switchTimeScalesCaptionItem1, Me.switchCompressWeekendItem1, Me.switchShowWorkTimeOnlyItem1, Me.switchCellsAutoHeightItem1, Me.changeSnapToCellsUIItem1, Me.editAppointmentQueryItem1, Me.editOccurrenceUICommandItem1, Me.editSeriesUICommandItem1, Me.deleteAppointmentsItem1, Me.deleteOccurrenceItem1, Me.deleteSeriesItem1, Me.splitAppointmentItem1, Me.changeAppointmentStatusItem1, Me.changeAppointmentLabelItem1, Me.toggleRecurrenceItem1, Me.changeAppointmentReminderItem1, Me.btnRecurrenceToNormal, Me.btnCalculateSeriesInterval})
             Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
             Me.ribbonControl1.MaxItemId = 45
             Me.ribbonControl1.Name = "ribbonControl1"
-            Me.ribbonControl1.PageCategories.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageCategory() { Me.calendarToolsRibbonPageCategory1})
-            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() { Me.fileRibbonPage1, Me.homeRibbonPage1, Me.viewRibbonPage1, Me.ribbonPage1})
-            Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() { Me.repositoryItemSpinEdit1, Me.repositoryItemDuration1})
+            Me.ribbonControl1.PageCategories.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageCategory() {Me.calendarToolsRibbonPageCategory1})
+            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.fileRibbonPage1, Me.homeRibbonPage1, Me.viewRibbonPage1, Me.ribbonPage1})
+            Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.repositoryItemSpinEdit1, Me.repositoryItemDuration1})
             Me.ribbonControl1.Size = New System.Drawing.Size(784, 139)
             ' 
             ' openScheduleItem1
@@ -256,10 +258,10 @@
             ' repositoryItemSpinEdit1
             ' 
             Me.repositoryItemSpinEdit1.AutoHeight = False
-            Me.repositoryItemSpinEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.repositoryItemSpinEdit1.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default
-            Me.repositoryItemSpinEdit1.MaxValue = New Decimal(New Integer() { 200, 0, 0, 0})
-            Me.repositoryItemSpinEdit1.MinValue = New Decimal(New Integer() { 10, 0, 0, 0})
+            Me.repositoryItemSpinEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.repositoryItemSpinEdit1.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+            Me.repositoryItemSpinEdit1.MaxValue = New Decimal(New Integer() {200, 0, 0, 0})
+            Me.repositoryItemSpinEdit1.MinValue = New Decimal(New Integer() {10, 0, 0, 0})
             Me.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1"
             ' 
             ' switchTimeScalesCaptionItem1
@@ -290,10 +292,7 @@
             ' editAppointmentQueryItem1
             ' 
             Me.editAppointmentQueryItem1.Id = 30
-            Me.editAppointmentQueryItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.editOccurrenceUICommandItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.editSeriesUICommandItem1) _
-            })
+            Me.editAppointmentQueryItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.editOccurrenceUICommandItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.editSeriesUICommandItem1)})
             Me.editAppointmentQueryItem1.Name = "editAppointmentQueryItem1"
             Me.editAppointmentQueryItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
             ' 
@@ -310,10 +309,7 @@
             ' deleteAppointmentsItem1
             ' 
             Me.deleteAppointmentsItem1.Id = 33
-            Me.deleteAppointmentsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.deleteOccurrenceItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.deleteSeriesItem1) _
-            })
+            Me.deleteAppointmentsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.deleteOccurrenceItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.deleteSeriesItem1)})
             Me.deleteAppointmentsItem1.Name = "deleteAppointmentsItem1"
             Me.deleteAppointmentsItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
             ' 
@@ -355,9 +351,9 @@
             ' 
             ' repositoryItemDuration1
             ' 
-            Me.repositoryItemDuration1.AllowNullInput = DevExpress.Utils.DefaultBoolean.False
+            Me.repositoryItemDuration1.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
             Me.repositoryItemDuration1.AutoHeight = False
-            Me.repositoryItemDuration1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.repositoryItemDuration1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.repositoryItemDuration1.DisabledStateText = Nothing
             Me.repositoryItemDuration1.Name = "repositoryItemDuration1"
             Me.repositoryItemDuration1.NullValuePromptShowForEmptyValue = True
@@ -369,23 +365,25 @@
             Me.btnRecurrenceToNormal.Caption = "RecurrentSeries -> NormalSeries"
             Me.btnRecurrenceToNormal.Id = 43
             Me.btnRecurrenceToNormal.Name = "btnRecurrenceToNormal"
+            AddHandler Me.btnRecurrenceToNormal.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.btnTest_ItemClick)
             ' 
             ' btnCalculateSeriesInterval
             ' 
             Me.btnCalculateSeriesInterval.Caption = "Calculate Time Interval of the Series"
             Me.btnCalculateSeriesInterval.Id = 44
             Me.btnCalculateSeriesInterval.Name = "btnCalculateSeriesInterval"
+            AddHandler Me.btnCalculateSeriesInterval.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.btnCalculateSeriesInterval_ItemClick)
             ' 
             ' calendarToolsRibbonPageCategory1
             ' 
             Me.calendarToolsRibbonPageCategory1.Control = Me.schedulerControl1
             Me.calendarToolsRibbonPageCategory1.Name = "calendarToolsRibbonPageCategory1"
-            Me.calendarToolsRibbonPageCategory1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() { Me.appointmentRibbonPage1})
+            Me.calendarToolsRibbonPageCategory1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.appointmentRibbonPage1})
             Me.calendarToolsRibbonPageCategory1.Visible = False
             ' 
             ' appointmentRibbonPage1
             ' 
-            Me.appointmentRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.actionsRibbonPageGroup1, Me.optionsRibbonPageGroup1})
+            Me.appointmentRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.actionsRibbonPageGroup1, Me.optionsRibbonPageGroup1})
             Me.appointmentRibbonPage1.Name = "appointmentRibbonPage1"
             Me.appointmentRibbonPage1.Visible = False
             ' 
@@ -406,7 +404,7 @@
             ' 
             ' fileRibbonPage1
             ' 
-            Me.fileRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.commonRibbonPageGroup1, Me.printRibbonPageGroup1})
+            Me.fileRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.commonRibbonPageGroup1, Me.printRibbonPageGroup1})
             Me.fileRibbonPage1.Name = "fileRibbonPage1"
             ' 
             ' commonRibbonPageGroup1
@@ -424,7 +422,7 @@
             ' 
             ' homeRibbonPage1
             ' 
-            Me.homeRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.appointmentRibbonPageGroup1, Me.navigatorRibbonPageGroup1, Me.arrangeRibbonPageGroup1, Me.groupByRibbonPageGroup1})
+            Me.homeRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.appointmentRibbonPageGroup1, Me.navigatorRibbonPageGroup1, Me.arrangeRibbonPageGroup1, Me.groupByRibbonPageGroup1})
             Me.homeRibbonPage1.Name = "homeRibbonPage1"
             ' 
             ' appointmentRibbonPageGroup1
@@ -462,7 +460,7 @@
             ' 
             ' viewRibbonPage1
             ' 
-            Me.viewRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.activeViewRibbonPageGroup1, Me.timeScaleRibbonPageGroup1, Me.layoutRibbonPageGroup1})
+            Me.viewRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.activeViewRibbonPageGroup1, Me.timeScaleRibbonPageGroup1, Me.layoutRibbonPageGroup1})
             Me.viewRibbonPage1.Name = "viewRibbonPage1"
             ' 
             ' activeViewRibbonPageGroup1
@@ -493,7 +491,7 @@
             ' 
             ' ribbonPage1
             ' 
-            Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.ribbonPageGroup1})
+            Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1})
             Me.ribbonPage1.Name = "ribbonPage1"
             Me.ribbonPage1.Text = "OccurrenceCalculator"
             ' 
@@ -561,86 +559,149 @@
             Me.Controls.Add(Me.ribbonControl1)
             Me.Name = "Form1"
             Me.Text = "Occurrence Calculator Example"
-            CType(Me.schedulerControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.schedulerStorage1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.repositoryItemSpinEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.repositoryItemDuration1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.schedulerBarController1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.schedulerControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.schedulerStorage1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.repositoryItemSpinEdit1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.repositoryItemDuration1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.schedulerBarController1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
-
         End Sub
 
-        #End Region
-
+#End Region
         Private schedulerControl1 As DevExpress.XtraScheduler.SchedulerControl
+
         Private ribbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+
         Private openScheduleItem1 As DevExpress.XtraScheduler.UI.OpenScheduleItem
+
         Private saveScheduleItem1 As DevExpress.XtraScheduler.UI.SaveScheduleItem
+
         Private printPreviewItem1 As DevExpress.XtraScheduler.UI.PrintPreviewItem
+
         Private printItem1 As DevExpress.XtraScheduler.UI.PrintItem
+
         Private printPageSetupItem1 As DevExpress.XtraScheduler.UI.PrintPageSetupItem
+
         Private newAppointmentItem1 As DevExpress.XtraScheduler.UI.NewAppointmentItem
+
         Private newRecurringAppointmentItem1 As DevExpress.XtraScheduler.UI.NewRecurringAppointmentItem
+
         Private navigateViewBackwardItem1 As DevExpress.XtraScheduler.UI.NavigateViewBackwardItem
+
         Private navigateViewForwardItem1 As DevExpress.XtraScheduler.UI.NavigateViewForwardItem
+
         Private gotoTodayItem1 As DevExpress.XtraScheduler.UI.GotoTodayItem
+
         Private viewZoomInItem1 As DevExpress.XtraScheduler.UI.ViewZoomInItem
+
         Private viewZoomOutItem1 As DevExpress.XtraScheduler.UI.ViewZoomOutItem
+
         Private switchToDayViewItem1 As DevExpress.XtraScheduler.UI.SwitchToDayViewItem
+
         Private switchToWorkWeekViewItem1 As DevExpress.XtraScheduler.UI.SwitchToWorkWeekViewItem
+
         Private switchToWeekViewItem1 As DevExpress.XtraScheduler.UI.SwitchToWeekViewItem
+
         Private switchToFullWeekViewItem1 As DevExpress.XtraScheduler.UI.SwitchToFullWeekViewItem
+
         Private switchToMonthViewItem1 As DevExpress.XtraScheduler.UI.SwitchToMonthViewItem
+
         Private switchToTimelineViewItem1 As DevExpress.XtraScheduler.UI.SwitchToTimelineViewItem
+
         Private switchToGanttViewItem1 As DevExpress.XtraScheduler.UI.SwitchToGanttViewItem
+
         Private groupByNoneItem1 As DevExpress.XtraScheduler.UI.GroupByNoneItem
+
         Private groupByDateItem1 As DevExpress.XtraScheduler.UI.GroupByDateItem
+
         Private groupByResourceItem1 As DevExpress.XtraScheduler.UI.GroupByResourceItem
+
         Private switchTimeScalesItem1 As DevExpress.XtraScheduler.UI.SwitchTimeScalesItem
+
         Private changeScaleWidthItem1 As DevExpress.XtraScheduler.UI.ChangeScaleWidthItem
+
         Private repositoryItemSpinEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
+
         Private switchTimeScalesCaptionItem1 As DevExpress.XtraScheduler.UI.SwitchTimeScalesCaptionItem
+
         Private switchCompressWeekendItem1 As DevExpress.XtraScheduler.UI.SwitchCompressWeekendItem
+
         Private switchShowWorkTimeOnlyItem1 As DevExpress.XtraScheduler.UI.SwitchShowWorkTimeOnlyItem
+
         Private switchCellsAutoHeightItem1 As DevExpress.XtraScheduler.UI.SwitchCellsAutoHeightItem
+
         Private changeSnapToCellsUIItem1 As DevExpress.XtraScheduler.UI.ChangeSnapToCellsUIItem
+
         Private editAppointmentQueryItem1 As DevExpress.XtraScheduler.UI.EditAppointmentQueryItem
+
         Private editOccurrenceUICommandItem1 As DevExpress.XtraScheduler.UI.EditOccurrenceUICommandItem
+
         Private editSeriesUICommandItem1 As DevExpress.XtraScheduler.UI.EditSeriesUICommandItem
+
         Private deleteAppointmentsItem1 As DevExpress.XtraScheduler.UI.DeleteAppointmentsItem
+
         Private deleteOccurrenceItem1 As DevExpress.XtraScheduler.UI.DeleteOccurrenceItem
+
         Private deleteSeriesItem1 As DevExpress.XtraScheduler.UI.DeleteSeriesItem
+
         Private splitAppointmentItem1 As DevExpress.XtraScheduler.UI.SplitAppointmentItem
+
         Private changeAppointmentStatusItem1 As DevExpress.XtraScheduler.UI.ChangeAppointmentStatusItem
+
         Private changeAppointmentLabelItem1 As DevExpress.XtraScheduler.UI.ChangeAppointmentLabelItem
+
         Private toggleRecurrenceItem1 As DevExpress.XtraScheduler.UI.ToggleRecurrenceItem
+
         Private changeAppointmentReminderItem1 As DevExpress.XtraScheduler.UI.ChangeAppointmentReminderItem
+
         Private repositoryItemDuration1 As DevExpress.XtraScheduler.UI.RepositoryItemDuration
+
         Private calendarToolsRibbonPageCategory1 As DevExpress.XtraScheduler.UI.CalendarToolsRibbonPageCategory
+
         Private appointmentRibbonPage1 As DevExpress.XtraScheduler.UI.AppointmentRibbonPage
+
         Private actionsRibbonPageGroup1 As DevExpress.XtraScheduler.UI.ActionsRibbonPageGroup
+
         Private optionsRibbonPageGroup1 As DevExpress.XtraScheduler.UI.OptionsRibbonPageGroup
+
         Private fileRibbonPage1 As DevExpress.XtraScheduler.UI.FileRibbonPage
+
         Private commonRibbonPageGroup1 As DevExpress.XtraScheduler.UI.CommonRibbonPageGroup
+
         Private printRibbonPageGroup1 As DevExpress.XtraScheduler.UI.PrintRibbonPageGroup
+
         Private homeRibbonPage1 As DevExpress.XtraScheduler.UI.HomeRibbonPage
+
         Private appointmentRibbonPageGroup1 As DevExpress.XtraScheduler.UI.AppointmentRibbonPageGroup
+
         Private navigatorRibbonPageGroup1 As DevExpress.XtraScheduler.UI.NavigatorRibbonPageGroup
+
         Private arrangeRibbonPageGroup1 As DevExpress.XtraScheduler.UI.ArrangeRibbonPageGroup
+
         Private groupByRibbonPageGroup1 As DevExpress.XtraScheduler.UI.GroupByRibbonPageGroup
+
         Private viewRibbonPage1 As DevExpress.XtraScheduler.UI.ViewRibbonPage
+
         Private activeViewRibbonPageGroup1 As DevExpress.XtraScheduler.UI.ActiveViewRibbonPageGroup
+
         Private timeScaleRibbonPageGroup1 As DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup
+
         Private layoutRibbonPageGroup1 As DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup
+
         Private ribbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+
         Private ribbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+
         Private schedulerStorage1 As DevExpress.XtraScheduler.SchedulerStorage
+
         Private schedulerBarController1 As DevExpress.XtraScheduler.UI.SchedulerBarController
-        Private WithEvents btnRecurrenceToNormal As DevExpress.XtraBars.BarButtonItem
-        Private WithEvents btnCalculateSeriesInterval As DevExpress.XtraBars.BarButtonItem
+
+        Private btnRecurrenceToNormal As DevExpress.XtraBars.BarButtonItem
+
+        Private btnCalculateSeriesInterval As DevExpress.XtraBars.BarButtonItem
+
         Private defaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
     End Class
 End Namespace
-
